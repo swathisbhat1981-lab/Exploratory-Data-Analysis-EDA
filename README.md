@@ -22,13 +22,13 @@ DecodeLabs runs an e-commerce operation across 7 product lines. Leadership needs
 
 Key fields: `Product`, `Quantity`, `UnitPrice`, `TotalPrice`, `PaymentMethod`, `OrderStatus`, `CouponCode`, `ReferralSource`, `Date`.
 
-## 🛠️ Tools & Libraries
+## 🛠️ Tools & Libraries:
 
 - **Python 3** — pandas, numpy for analysis
 - **Matplotlib** — charting
 - **openpyxl** — reading `.xlsx` files
 
-## 📊 Methodology
+## 📊 Methodology:
 
 1. **Data profiling** — shape, dtypes, missing-value and duplicate checks, reconciliation of `TotalPrice = Quantity × UnitPrice`.
 2. **Descriptive statistics** — five-number summary (min, Q1, median, Q3, max) for every numeric field.
@@ -37,7 +37,7 @@ Key fields: `Product`, `Quantity`, `UnitPrice`, `TotalPrice`, `PaymentMethod`, `
 5. **Correlation analysis** — Pearson r across all numeric fields, with an explicit correlation ≠ causation check.
 6. **Business aggregation** — revenue and order counts grouped by product, year/month, payment method, order status, coupon code, and referral source.
 
-## 🔑 Key Findings
+## 🔑 Key Findings:
 
 - **TotalPrice is right-skewed** (skew = 0.89) — median (₹823.62) is a more honest "typical order" figure than mean (₹1,053.97).
 - **41.4% of all orders** end in *Cancelled* or *Returned* status, representing ~₹519,674 in unrealized/reversed revenue — and these lost orders skew *above* average value, not below.
@@ -45,7 +45,7 @@ Key fields: `Product`, `Quantity`, `UnitPrice`, `TotalPrice`, `PaymentMethod`, `
 - **Revenue is well diversified** — no single product exceeds 15.5% of total revenue.
 - **8 orders flagged by IQR** as statistically extreme were confirmed **not** to be data errors by the stricter Z-score test (0 flags) — treated as legitimate high-value orders, not removed.
 
-## 🖼️ Visuals
+## 🖼️ Visuals:
 
 | Chart | What it shows |
 |---|---|
@@ -55,7 +55,7 @@ Key fields: `Product`, `Quantity`, `UnitPrice`, `TotalPrice`, `PaymentMethod`, `
 | `charts/trend.png` | Monthly revenue trend, Jan 2023–Jun 2025 |
 | `charts/visual_evidence_slide.png` | Before/after chart-design comparison (noisy 3D pie → clean insight bar) |
 
-## 📁 Repository Structure
+## 📁 Repository Structure:
 
 ```
 decodelabs-project2-eda/
@@ -72,7 +72,7 @@ decodelabs-project2-eda/
 └── DecodeLabs_Project2_EDA_Report.html
 ```
 
-## ▶️ How to Run
+## ▶️ How to Run:
 
 ```bash
 pip install pandas numpy matplotlib openpyxl
@@ -81,7 +81,7 @@ python eda_analysis.py
 
 This reads the Excel file, prints every statistic to the terminal, and saves all chart images into the project folder.
 
-## 📝 Recommendations
+## 📝 Recommendations:
 
 1. Investigate the Cancelled/Returned segment first — the largest single revenue leak.
 2. Report order value using **median**, not mean, given the skew.
