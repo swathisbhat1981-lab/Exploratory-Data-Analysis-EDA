@@ -1,11 +1,7 @@
 # DecodeLabs — Project 2: Exploratory Data Analysis (EDA)
 
 Exploratory analysis of a 1,200-row e-commerce order dataset — uncovering distribution shape, outliers, correlations, and business-relevant trends before any dashboarding or modeling work begins.
-
-> Data Analytics Internship · Project 2 · DecodeLabs · Batch 2026
-
 ---
-
 ## 📌 Problem Statement
 
 DecodeLabs runs an e-commerce operation across 7 product lines. Leadership needs to know which products, payment methods, and channels actually drive revenue — and how much of the order pipeline is being lost to cancellations and returns.
@@ -90,5 +86,3 @@ This reads the Excel file, prints every statistic to the terminal, and saves all
 5. Re-run this analysis quarterly as new data lands — 2025 in this dataset is only a partial year.
 
 ---
-
-*Built as part of the DecodeLabs Data Analytics Industrial Training Kit, Project 2 (Exploratory Data Analysis).*
