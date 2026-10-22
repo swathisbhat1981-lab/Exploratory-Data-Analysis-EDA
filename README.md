@@ -85,4 +85,5 @@ This reads the Excel file, prints every statistic to the terminal, and saves all
 4. Protect channel diversification (payment methods, referral sources) rather than consolidating around the current leaders.
 5. Re-run this analysis quarterly as new data lands — 2025 in this dataset is only a partial year.
 
+**********************************************************************************************
 ---
