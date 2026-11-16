@@ -118,39 +118,3 @@ plt.rcParams.update({
     "axes.edgecolor": GRID, "grid.color": GRID,
     "font.family": "monospace", "font.size": 11,
 })
-
-# Distribution histogram
-fig, ax = plt.subplots(figsize=(7, 4))
-ax.hist(df['TotalPrice'], bins=30, color=CYAN, alpha=0.85, edgecolor=BG)
-ax.axvline(df['TotalPrice'].mean(), color=RED, ls='--', lw=2, label='Mean')
-ax.axvline(df['TotalPrice'].median(), color='white', lw=2, label='Median')
-ax.legend()
-plt.tight_layout()
-plt.savefig('distribution.png', dpi=150)
-plt.close()
-
-# Boxplot by product
-fig, ax = plt.subplots(figsize=(8, 4.3))
-order = df.groupby('Product')['TotalPrice'].median().sort_values(ascending=False).index
-data = [df.loc[df['Product'] == p, 'TotalPrice'].values for p in order]
-ax.boxplot(data, tick_labels=order, patch_artist=True)
-plt.tight_layout()
-plt.savefig('boxplot.png', dpi=150)
-plt.close()
-
-# Correlation heatmap
-fig, ax = plt.subplots(figsize=(5.3, 4.6))
-im = ax.imshow(corr, cmap='coolwarm', vmin=-1, vmax=1)
-plt.colorbar(im, ax=ax)
-plt.tight_layout()
-plt.savefig('correlation.png', dpi=150)
-plt.close()
-
-# Monthly trend
-fig, ax = plt.subplots(figsize=(9, 4))
-ax.plot(monthly.index.to_timestamp(), monthly.values, color=CYAN, marker='o')
-plt.tight_layout()
-plt.savefig('trend.png', dpi=150)
-plt.close()
-
-print("Done — all figures saved.")
