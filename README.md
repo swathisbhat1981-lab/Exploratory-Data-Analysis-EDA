@@ -66,24 +66,3 @@ decodelabs-project2-eda/
 │   ├── trend.png
 │   └── visual_evidence_slide.png
 └── DecodeLabs_Project2_EDA_Report.html
-```
-
-## ▶️ How to Run:
-
-```bash
-pip install pandas numpy matplotlib openpyxl
-python eda_analysis.py
-```
-
-This reads the Excel file, prints every statistic to the terminal, and saves all chart images into the project folder.
-
-## 📝 Recommendations:
-
-1. Investigate the Cancelled/Returned segment first — the largest single revenue leak.
-2. Report order value using **median**, not mean, given the skew.
-3. Build a VIP/bulk-order outreach list from the 8 confirmed-legitimate high-value outliers.
-4. Protect channel diversification (payment methods, referral sources) rather than consolidating around the current leaders.
-5. Re-run this analysis quarterly as new data lands — 2025 in this dataset is only a partial year.
-
-
----
